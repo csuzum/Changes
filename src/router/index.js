@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
   {
@@ -15,6 +15,34 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
+    }
+  },
+  {
+    path: '/get-help',
+    name: 'get-help',
+    component: function () {
+      return import(/* webpackChunkName: "get-help" */ '../views/get-help.vue')
+    }
+  },
+  {
+    path: '/news-events',
+    name: 'news-events',
+    component: function () {
+      return import(/* webpackChunkName: "news-events" */ '../views/news-events.vue')
+    }
+  },
+  {
+    path: '/support',
+    name: 'support',
+    component: function () {
+      return import(/* webpackChunkName: "support" */ '../views/support.vue')
+    }
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: function () {
+      return import(/* webpackChunkName: "contact" */ '../views/contact.vue')
     }
   }
 ]
