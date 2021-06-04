@@ -4,7 +4,7 @@
         <div class="header-grid__logo">
           <img class="header-grid__logo__img" src="./assets/cpsn-logo.png">
         </div>
-        <p class="header-grid__call">Help? <span class="header-grid__call__phone">Call 1-888-000-0000</span></p>
+        <p class="header-grid__call">Need help? <span class="header-grid__call__phone">Call 1-888-000-0000</span></p>
         <div class="header-grid__donate">
           <p class="header-grid__donate__p">Donate</p>
         </div>
