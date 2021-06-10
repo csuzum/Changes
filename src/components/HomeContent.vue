@@ -45,13 +45,15 @@
         <p class="main-grid__intro__p">Changes brings hope to parents in our communities by connecting them to strong, sustainable groups.</p>
       </div>
 
-      <div class="main-grid__highlight1">
-        <img class="main-grid__highlight1__img" src="../assets/support.jpg">
-        <p class="main-grid__highlight1__p">Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope. New parents meet together in a small group on their first night. </p>
-      </div>
-      <div class="main-grid__highlight2">
-        <img class="main-grid__highlight2__img" src="../assets/mom-adult-son.jpg">
-        <p class="main-grid__highlight2__p">One common thread binds us together—we are all parenting a troubled youth or young adult. New attendees find they easily connect with other parents who are in a similar situation to their own.</p>
+      <div class="main-grid__highlight">
+          <div class="main-grid__highlight__1">
+          <img class="main-grid__highlight__1__img" src="../assets/support.jpg">
+          <p class="main-grid__highlight__1__p">Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope. New parents meet together in a small group on their first night. </p>
+        </div>
+        <div class="main-grid__highlight__2">
+          <img class="main-grid__highlight__2__img" src="../assets/mom-adult-son.jpg">
+          <p class="main-grid__highlight__2__p">One common thread binds us together—we are all parenting a troubled youth or young adult. New attendees find they easily connect with other parents who are in a similar situation to their own.</p>
+        </div>
       </div>
 
   </div>
@@ -63,7 +65,7 @@
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 // media queries
   @mixin tablet {
     @media screen and (max-width: 860px) {
@@ -100,7 +102,7 @@
   .main-grid {
     display: grid;
     grid-template-columns: 3fr 2.25fr 2.25fr 2.25fr 2.25fr;
-    grid-template-areas: "hero hero hero hero hero" ". content content content content" ". highlight1 highlight1 highlight2 highlight2";
+    grid-template-areas: "hero hero hero hero hero" ". content content content content" ". hilight hilight hilight hilight";
     @include mobile {
       display: unset;
     }
@@ -119,10 +121,12 @@
     // main content section
     &__content {
       grid-area: content;
+      width: 90%;
       font-family: $sans-serif;
       font-weight: $light;
       padding: 1rem 3rem 2rem 1.5rem;
       @include mobile {
+        width: 100%;
         text-align: center;
         padding: 0rem 2.5rem 1rem 2.5rem;
       }
@@ -219,7 +223,7 @@
       color: $white;
       &__head {
         font-weight: $light;
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         text-align: center;
         padding-top: 2rem;
         margin-top: -1rem;
@@ -228,7 +232,7 @@
         font-size: 1.5rem;
         line-height: 2rem;
         text-align: center;
-        padding: 0rem 2rem 2rem 2rem;
+        padding: 0rem 3rem 2rem 3rem;
         margin-top: -1rem;
       }
     }
@@ -243,94 +247,92 @@
         height: 8rem;
         color: $white;
         font-weight: $light;
-        font-size: 4rem;
+        font-size: 2rem;
         text-align: center;
         padding-top: 1.5rem;
         margin: 0;
-        @include mobile {
-          font-size: 2rem;
-        }
       }
       &__img {
         width: 100%;
       }
       &__MV {
-        font-size: 4rem;
-        line-height: 2.3rem;
+        font-size: 2.5rem;
         font-weight: $light;
         color: $white;
         text-align: center;
-        padding: 3rem 2rem 1rem 2rem;
-        @include mobile {
-          font-size: 2.5rem;
-          padding: 0rem;
-          margin-bottom: 0rem;
-        }
+        padding: 0rem;
+        margin: 1.5rem 0rem -1rem 0rem;
       }
       &__p {
         color: $white;
-        font-size: 2.5rem;
-        line-height: 3.5rem;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
         text-align: center;
-        padding: 0rem 4rem 2rem 4rem;
-        @include mobile {
-          font-size: 1.4rem;
-          line-height: 2rem;
-          padding: 0rem 2rem;
-        }
+        padding: 0rem 2rem;
       }
     }
 
     // highlight image/text sections
-    &__highlight1 {
-      grid-area: highlight1;
-      width: 26rem;
-      padding-left: 1.5rem;
-      @include mobile {
-        width: 100%;
-        padding: 0rem;
-      }
-      &__img {
-        width: 26rem;
-        @include mobile {
-          width: 100%;
-        }
-      }
-      &__p {
-        font-size: 1.2rem;
-        font-weight: $light;
-        line-height: 1.8rem;
-        padding: 1rem 0rem;
-        @include mobile {
-          font-size: 1.4rem;
-          line-height: 2rem;
-          text-align: center;
-          padding: 0rem 2rem;
-        }
-      }
-    }
-    &__highlight2 {
-      grid-area: highlight2;
-      width: 26rem;
+    &__highlight {
+      grid-area: hilight;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
       @include mobile {
         width: 100%;
       }
-      &__img {
-        width: 26rem;
+      &__1 {
+        width: 29rem;
+        padding-left: 1.5rem;
+        margin-right: 4rem;
         @include mobile {
-          width: 100%;
+          padding: 0rem;
+          margin: 0rem;
+        }
+        &__img {
+          width: 29rem;
+          @include mobile {
+            width: 100%;
+          }
+        }
+        &__p {
+          font-size: 1.2rem;
+          font-weight: $light;
+          line-height: 1.8rem;          
+          padding: 1rem 0rem;
+          @include mobile {
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            padding: 0rem 2rem;
+          }
         }
       }
-      &__p {
-        font-size: 1.2rem;
-        font-weight: $light;
-        line-height: 1.8rem;
-        padding: 1rem 0rem;
+      &__2 {        
+        width: 29rem;
+        margin-right: 4rem;
         @include mobile {
-          font-size: 1.4rem;
-          line-height: 2rem;
-          text-align: center;
-          padding: 0rem 2rem;
+          padding: 0rem;
+          margin: 0rem;
+        }
+        &__img {
+          width: 29rem;
+          @include mobile {
+            width: 100%;
+          }
+        }
+        &__p {
+          font-size: 1.2rem;
+          font-weight: $light;
+          line-height: 1.8rem;
+          padding: 1rem 0rem;
+          @include mobile {
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            padding: 0rem 2rem;
+          }
         }
       }
     }

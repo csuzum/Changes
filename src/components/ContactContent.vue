@@ -15,7 +15,7 @@
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 @mixin tablet {
   @media screen and (max-width: 860px) {
@@ -43,9 +43,8 @@
       font-family: $sans-serif;
       font-weight: $light;
       &__img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
       }
     }
 
@@ -53,8 +52,7 @@
       color: $white;
 
       &__h1 {
-        width: 90%;
-        // color: $white;
+        width: 95%;
         font-size: 5rem;
         font-weight: $light;
         text-align: center;
@@ -66,7 +64,6 @@
         @include mobile {
           font-weight: $medium;
           font-size: 2rem;
-          line-height: 2rem;
         }        
       }
     }  

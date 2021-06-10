@@ -3,7 +3,7 @@
     <div class="news-grid__hero">    
       <img class="news-grid__hero__img" src="../assets/news.jpg"> 
       <div class="news-grid__title">
-        <h1 class="news-grid__title__h1">Be a changemaker for families</h1>
+        <h1 class="news-grid__title__h1">See what's new with Changes</h1>
       </div>   
     </div>
   </div>   
@@ -15,7 +15,7 @@
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 @mixin tablet {
   @media screen and (max-width: 860px) {
@@ -43,7 +43,6 @@
       font-family: $sans-serif;
       font-weight: $light;
       &__img {
-        object-fit: cover;
         max-width: 100%;
         max-height: 100%;
       }
@@ -53,8 +52,7 @@
       color: $white;
 
       &__h1 {
-        width: 90%;
-        // color: $white;
+        width: 100%;
         font-size: 5rem;
         font-weight: $light;
         text-align: center;

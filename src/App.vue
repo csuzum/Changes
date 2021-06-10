@@ -107,12 +107,16 @@
   margin: auto;
   height: 8.5rem;
   display: grid;
-  grid-template-columns: 2fr 1fr 7.5fr 1fr;
+  grid-template-columns: 2fr .5fr 8fr 1fr;
   grid-template-areas: "logo . call call" "logo . nav donate";
   @include mobile {
     margin: auto;
     height: auto;
     grid-template-areas: "logo logo logo logo" "call call call call" "donate donate donate donate" "nav nav nav nav"
+  }
+  @include tablet {
+    margin: auto;
+    height: auto;
   }
   
   &__logo {
@@ -174,12 +178,12 @@
   &__nav {
     grid-area: nav;
     text-align: right;
-    padding: 2rem 0rem 1rem 0rem;
+    padding-top: 2.1rem;
     @include mobile {
       padding: 0rem;
     }
     &__items {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       display: flex;
       justify-content: flex-end;
       list-style-type: none;
@@ -306,9 +310,10 @@ nav.contact .contact {
     }
     &__form__input {
       width: 16rem;
-      height: 2.77rem;
+      height: 3rem;
       background-color: $lt-gray;
       padding-left: 1.5rem;
+      margin-top: -.5rem;
     }
   }
   &__connect {
