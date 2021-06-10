@@ -118,7 +118,7 @@
     margin: auto;
     height: auto;
   }
-  
+
   &__logo {
     grid-area: logo;
     padding: 1.7rem 0rem 0rem 5.5rem;
