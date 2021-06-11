@@ -137,7 +137,7 @@
 
   &__call {
     grid-area: call;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: $medium;
     color: $changes-blue;
     text-align: right;
@@ -167,7 +167,7 @@
 
     }
     &__p {
-        font-size: 1.2rem;
+        font-size: .8rem;
         font-weight: $bold;
         padding-bottom: 0rem;
         margin-left: auto;
@@ -183,7 +183,7 @@
       padding: 0rem;
     }
     &__items {
-      font-size: 1.1rem;
+      font-size: .8rem;
       display: flex;
       justify-content: flex-end;
       list-style-type: none;
