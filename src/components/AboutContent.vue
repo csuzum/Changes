@@ -1,11 +1,11 @@
 <template>
   <div class="about-grid">
-    <div class="about-grid__hero">    
-      <img class="about-grid__hero__img" src="../assets/concerned-woman.jpg"> 
-      <div class="about-grid__title">
-        <h1 class="about-grid__title__h1">Changes brings hope to struggling parents</h1>
-      </div>   
+    
+    <div class="about-grid__hero">
+      <h1 class="about-grid__hero__title">Changes brings hope to struggling parents</h1>    
+      <img class="about-grid__hero__img" src="../assets/concerned-woman.jpg">   
     </div>
+
     <!-- parent stories grid section -->
       <div class="Stories">
         <h1 class="Stories__title">Our Parent Stories</h1>
@@ -129,6 +129,7 @@
 }
 
   .about-grid {
+    box-sizing: border-box;
     margin: auto;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
@@ -139,35 +140,25 @@
     
     &__hero {
       grid-area: hero;
-      font-family: $sans-serif;
-      font-weight: $light;
-      text-align: center;
-      display: block;
-      &__img {
-        object-fit: scale-down;
-        max-width: 100%;
-        // max-height: 100%;
-      }
-    }
+      max-width: 1600px;
+      margin: 0;
+      position: relative;
 
-  &__title {
-      color: $white;
-
-      &__h1 {
-        width: 95%;
-        font-size: 4rem;
-        font-weight: $light;
+      &__title {
         text-align: center;
-        text-shadow: 2px 2px 10px $black;
+        color: $white;
+        position: relative;
+        z-index: 2;
+        font-family: sans-serif;
+        font-size: 2rem;
+      }
+
+      &__img {       
+        width: 100%;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @include mobile {
-          font-weight: $medium;
-          font-size: 2rem;
-          line-height: 2rem;
-        }        
+        z-index: 1;
+        top: 0;
+        height: 25rem;
       }
     }  
   }

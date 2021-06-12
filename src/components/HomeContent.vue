@@ -13,16 +13,17 @@
 
     <div class="main-grid__content">    
       <h1 class="main-grid__content__h1">Are you struggling to find successful parenting solutions?</h1>
-      <h1 class="main-grid__content__h1">Do you want to regain control of your home and guide your children to accept responsibility for their behavior?</h1>
+      <h1 class="main-grid__content__subhead">Do you want to regain control of your home and guide your children to accept responsibility for their behavior?</h1>
       <p class="main-grid__content__p">Changes Parent Support Network is a structured, peer-led program that provides support to parents struggling with children who are engaging in oppositional and self-destructive behaviors. Changes offers hope, help, support and relief from feeling overwhelmed and alone. We invite you to explore this website for information about our philosophy, our structured approach and meeting schedules.</p>    
     </div>
 
     <aside class="main-grid__aside" id="mobileHide">
       <h1 class="main-grid__aside__h1">Help for parents</h1>
         <div class="main-grid__aside__box">
-          <p class="main-grid__aside__box__p">I was a basket-case when we joined changes. Our son was using drugs, drug dealing and failing school. The group helped me by confronting me about the ways in which I was enabling our son.
-            <br><span class="main-grid__aside__box__p__father">~ father of 15 year-old son</span>
-          </p>
+          <p class="main-grid__aside__box__quote-mark">“</p>
+          <p class="main-grid__aside__box__p">I was a basket-case when we joined changes. Our son was using drugs, drug dealing and failing school. The group helped me by confronting me about the ways in which I was enabling our son.</p>
+          <p class="main-grid__aside__box__quote-mark2">”</p>
+          <p class="main-grid__aside__box__p__father">~ father of 15 year-old son</p>
           <div class="main-grid__aside__box__wrapper">
             <p class="main-grid__aside__box__wrapper__intro">An Introduction to Changes</p>
             <img class="main-grid__aside__box__wrapper__img" src="../assets/father-teen-son-crop.jpg"> 
@@ -47,12 +48,12 @@
 
       <div class="main-grid__highlight">
           <div class="main-grid__highlight__1">
-          <img class="main-grid__highlight__1__img" src="../assets/support.jpg">
-          <p class="main-grid__highlight__1__p">Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope. New parents meet together in a small group on their first night. </p>
+          <img class="main-grid__highlight__1__img" src="../assets/support-horiz.jpg">
+          <p class="main-grid__highlight__1__p">Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope. New parents meet together in a small group on their first night. <a href="#"><router-link to="/get-help" class="get-help">read more</router-link></a></p>
         </div>
         <div class="main-grid__highlight__2">
-          <img class="main-grid__highlight__2__img" src="../assets/mom-adult-son.jpg">
-          <p class="main-grid__highlight__2__p">One common thread binds us together—we are all parenting a troubled youth or young adult. New attendees find they easily connect with other parents who are in a similar situation to their own.</p>
+          <img class="main-grid__highlight__2__img" src="../assets/mom-daughter.jpg">
+          <p class="main-grid__highlight__2__p">One common thread binds us together—we are all parenting a troubled youth or young adult. New attendees find they easily connect with other parents who are in a similar situation to their own. <a href="#"><router-link to="/about" class="about">read more</router-link></a></p>
         </div>
       </div>
 
@@ -121,10 +122,10 @@
     // main content section
     &__content {
       grid-area: content;
-      width: 90%;
+      width: 95%;
       font-family: $sans-serif;
       font-weight: $light;
-      padding: 1rem 3rem 2rem 1.5rem;
+      padding: 1rem 3rem .5rem 1.5rem;
       @include mobile {
         width: 100%;
         text-align: center;
@@ -134,14 +135,22 @@
         font-size: 1.9rem;
         font-weight: $medium;
         color: $changes-blue;
-        margin-top: 1rem;
+        margin-top: 0rem;
+        @include mobile {
+          font-size: 1.7rem;
+        }
+      }
+      &__subhead {
+        font-size: 1.1rem;
+        font-weight: $medium;
+        color: $changes-blue;
         @include mobile {
           font-size: 1.7rem;
         }
       }
       &__p {
-        font-size: 1.2rem;
-        line-height: 2rem;
+        font-size: .9rem;
+        line-height: 1.6rem;
         @include mobile {
           font-size: 1.4rem;
           // line-height: 1.5rem;
@@ -152,8 +161,8 @@
 
     // aside only appears on desktop
     &__aside {
-      width: 23rem;
-      padding-top: 3rem;
+      width:  16.5rem;
+      padding-top: 1rem;
       grid-row-start: hero-start;
       grid-row-end: highlight1-end;
       grid-column-start: hero-start;
@@ -161,53 +170,80 @@
 
       &__h1 {
         color: $white;
-        font-size: 4rem;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
         font-weight: $light;
-        line-height: 4rem;
         text-align: center;
+        text-shadow: 2px 2px 10px $dark-gray;
         padding: 2rem 0 3rem 0;
         margin: 0;
       }
       &__box {
         background-color: $orange;
-        border-top: 1rem solid white;
-        border-right: 1rem solid white;
-        padding: 1rem 0rem;
+        border-top: .8rem solid white;
+        border-right: .8rem solid white;
+        padding-bottom: 6rem;
+
+        &__quote-mark {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 10rem;
+            line-height: 4rem;
+            color: $white;
+            opacity: .5; 
+            text-align: center;
+            margin: 3.5rem 0 -4.5rem 0;
+        }
+        &__quote-mark2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 10rem;
+            line-height: 4rem;
+            color: $white;
+            opacity: .5; 
+            text-align: center;
+            margin: 1.8rem 0 -3rem 0;
+        }
+        
         &__p {
-          font-size: 1.6rem;
-          line-height: 2.3rem;
+          font-size: 1.2rem;
+          line-height: 1.8rem;
           font-weight: $light;
           color: $white;
           text-align: center;
-          padding: .5rem 2rem 1rem 2rem;
+          padding: .5rem 2rem .5rem 2rem;
+          
           &__father {
-            font-size: 1.3rem;
+            text-align: center;
+            color: white;
+            font-size: .9rem;
+            line-height: 1rem;
+            font-weight: $medium;
             font-style: italic;
           }
         }
         &__wrapper {
           &__intro {
             background-color: $dark-gray;
-            height: 3rem;
+            height: 4rem;
             color: $white;
             font-weight: $light;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             text-align: center;
             padding-top: .5rem;
             margin: 0;
           }
           &__img {
-            width: 22rem;
+            width: 15.75rem;
           }
         }
         &__mission {
-          font-size: 1.6rem;
-          line-height: 2.3rem;
+          font-size: 1.1rem;
+          line-height: 1.6rem;
           font-weight: $light;
           color: $white;
           text-align: center;
-          padding: 0rem 2rem 0rem 2rem;
+          padding: 0rem 2rem 2rem 2rem;
           &__head {
+            font-size: 1.6rem;
             font-weight: $medium;
             line-height: .1rem;
             text-transform: uppercase;
@@ -275,32 +311,26 @@
     // highlight image/text sections
     &__highlight {
       grid-area: hilight;
-      width: 90%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      width: 85%;
       @include mobile {
         width: 100%;
       }
-      &__1 {
-        width: 29rem;
+      &__1 {  
         padding-left: 1.5rem;
-        margin-right: 4rem;
         @include mobile {
           padding: 0rem;
           margin: 0rem;
         }
         &__img {
-          width: 29rem;
+          width: 100%;
           @include mobile {
             width: 100%;
           }
         }
         &__p {
-          font-size: 1.2rem;
+          font-size: .9rem;
+          line-height: 1.6rem;
           font-weight: $light;
-          line-height: 1.8rem;          
-          padding: 1rem 0rem;
           @include mobile {
             text-align: center;
             font-size: 1.4rem;
@@ -310,23 +340,21 @@
         }
       }
       &__2 {        
-        width: 29rem;
-        margin-right: 4rem;
+        padding-left: 1.5rem;
         @include mobile {
           padding: 0rem;
           margin: 0rem;
         }
         &__img {
-          width: 29rem;
+          width: 100%;
           @include mobile {
             width: 100%;
           }
         }
         &__p {
-          font-size: 1.2rem;
+          font-size: .9rem;
+          line-height: 1.6rem;
           font-weight: $light;
-          line-height: 1.8rem;
-          padding: 1rem 0rem;
           @include mobile {
             text-align: center;
             font-size: 1.4rem;

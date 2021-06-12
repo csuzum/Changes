@@ -3,6 +3,14 @@
   <div class="get-help-grid">
 
     <div class="get-help-grid__hero">    
+      <img class="get-help-grid__hero__img" src="../assets/support-group.jpg">    
+    </div>
+
+    <div class="get-help-grid__hero-title">
+      <h1 class="get-help-grid__hero-title__h1">We're here for you</h1>
+    </div>
+
+    <!-- <div class="get-help-grid__hero">    
       <img class="get-help-grid__hero__img" src="../assets/support-group.jpg"> 
       <div class="get-help-grid__title" id="mobileHide">
         <h1 class="get-help-grid__title__h1" id="mobileHide">We're here for you</h1>
@@ -10,7 +18,7 @@
       <div class="get-help-grid__mobile-title" id="mobileShow">
         <h1 class="get-help-grid__mobile-title__h1" id="mobileShow">We're here for you</h1>   
       </div>
-    </div>   
+    </div>    -->
 
     <div class="get-help-grid__intro">
       <h1 class="get-help-grid__intro__h1">Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope.</h1>
@@ -22,15 +30,17 @@
     </div>
 
     <div class="get-help-grid__locations">
-      <h1 class="get-help-grid__locations__h1">Our support groups</h1>
-      <h2 class="get-help-grid__locations__h2">(currently all group meetings are virtual)</h2>
-      <div class="get-help-grid__locations__meetings">        
-        <img class="get-help-grid__locations__meetings__img" src="../assets/support-square.jpg">
+    
+      <div class="get-help-grid__locations__meetings">
+        <h1 class="get-help-grid__locations__h1">We're glad you're here, but sorry you had to come</h1>        
+        <img class="get-help-grid__locations__meetings__img" src="../assets/welcome-group.jpg">
+        <h1 class="get-help-grid__locations__h1">Find your Changes meeting</h1>
+        
         <div class="get-help-grid__locations__meetings__container">
-          <p class="get-help-grid__locations__meetings__container__p"><span class="get-help-grid__locations__meetings__container__p__span">Everett, WA </span>4634 Alger Ave  <br>Thursdays: 6:30-9pm(PST)</p>
-          <p class="get-help-grid__locations__meetings__container__p"><span class="get-help-grid__locations__meetings__container__p__span">Redmond, WA</span> 6505 176th Ave NE<br>Tuesdays: 7-9:30pm(PST)</p>
-          <p class="get-help-grid__locations__meetings__container__p"><span class="get-help-grid__locations__meetings__container__p__span">Seattle, WA </span> 4401 2nd Ave NE<br>Wednesdays: 7-9:30pm(PST)</p>
-          <p class="get-help-grid__locations__meetings__container__p"><span class="get-help-grid__locations__meetings__container__p__span">Online</span> <br>Saturdays: 10am-Noon(PST)</p>
+          <p class="get-help-grid__locations__meetings__container__p"><span class="get-help-grid__locations__meetings__container__p__span">Everett, WA </span> | 4634 Alger Ave | Thursdays: 6:30-9pm(PST)</p>
+          <p class="get-help-grid__locations__meetings__container__p"><span class="get-help-grid__locations__meetings__container__p__span">Redmond, WA</span> | 6505 176th Ave NE | Tuesdays: 7-9:30pm(PST)</p>
+          <p class="get-help-grid__locations__meetings__container__p"><span class="get-help-grid__locations__meetings__container__p__span">Seattle, WA </span> | 4401 2nd Ave NE | Wednesdays: 7-9:30pm(PST)</p>
+          <p class="get-help-grid__locations__meetings__container__p"><span class="get-help-grid__locations__meetings__container__p__span">Online</span> | Saturdays: 10am-Noon(PST)</p>
         </div>
         
       </div>
@@ -166,59 +176,47 @@ export default {
       font-family: $sans-serif;
       font-weight: $light;
       &__img {
+        object-fit: cover;
         max-width: 100%;
         max-height: 100%;
-        @include mobile {
-          margin-bottom: -1.7rem;
-        }
+      }
+    } 
+
+    &__hero-title {
+      grid-area: hero;
+      z-index: 1;
+      &__h1 {
+        color: $white;
+        font-size: 3.5rem;
+        font-weight: $light;
+        text-shadow: 2px 2px 10px $dark-gray;
+        text-align: center;
+        padding: 3rem 0rem;
+        margin: 0;
       }
     }
 
-  // desktop & tablet only
-  &__title {
-    color: $white;
-    @include tablet {
-        color: $changes-blue;
-      }
-
-    &__h1 {
-      width: 100%;
-      font-size: 5rem;
-      font-weight: $light;
-      text-align: center;
-      text-shadow: 2px 2px 10px $black;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      @include tablet {
-        color: $changes-blue;
-      }       
-    }
-  }
-
-  // mobile only
-  &__mobile-title {
-    color: $white;
-    background-color: $orange;
-    text-align: center;
-    padding: 1.5rem 0rem .5rem;
-    &__h1 {
-      font-weight: $medium;
-    }
-  }
+  // // mobile only
+  // &__mobile-title {
+  //   color: $white;
+  //   background-color: $orange;
+  //   text-align: center;
+  //   padding: 1.5rem 0rem .5rem;
+  //   &__h1 {
+  //     font-weight: $medium;
+  //   }
+  // }
 
   &__intro {
     grid-area: intro;
     width: 80%;
     margin: auto;
-    padding: 2rem 0rem;
     @include mobile {
       padding: 0rem;
     }
     &__h1 {
-      font-size: 3.5rem;
-      font-weight: $medium;
+      font-size: 1.9rem;
+      font-weight: $light;
       text-align: center;
       color: $changes-blue;
       margin-top: 2rem;
@@ -229,8 +227,8 @@ export default {
     &__columns {
       column-count: 2;
       column-gap: 3rem;
-      font-size: 1.4rem;
-      line-height: 2rem;
+      font-size: .9rem;
+      line-height: 1.6rem;
       padding-bottom: 2rem;
       @include mobile {
         column-count: 1;
@@ -246,13 +244,15 @@ export default {
   &__locations {
     grid-area: locations;
     background-color: $changes-blue;
-    padding: 2rem 0rem;
+    text-align: center;
+    padding: 1rem 0 0 0;
     @include mobile {
       grid-area: unset;
     }
     &__h1 {
-      font-size: 3.5rem;
-      font-weight: $medium;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      font-weight: $light;
       text-align: center;
       color: $white;
       margin-top: 1rem;
@@ -261,31 +261,20 @@ export default {
         margin-top: 0rem;
       }
     }
-    &__h2 {
-      font-weight: $medium;
-      color: $white;
-      text-align: center;
-      margin-top: -1.5rem;
-      @include mobile {
-        font-size: 1.4rem;
-        padding: .5rem 2rem 0rem 2rem;
-      }
-    }
+
     &__meetings {
-      display: flex;
-      width: 65%;
+      width: 80%;
       margin: auto;
-      font-size: 1.4rem;
-      line-height: 2rem;
+      font-size: 1rem;
+      line-height: 1.7rem;
       padding-bottom: 2rem;
       @include mobile {
         display: unset;
       }
       &__img {
         display: block;
-        width: 474px;
-        height: 400px;
-        padding-top: 1.5rem;
+        width: 600px;
+        margin: auto;
         @include mobile {
           width: 100%;
           height: 100%;
@@ -294,8 +283,7 @@ export default {
       &__container {
         &__p {
           color: $white;
-          padding-left: 2rem;
-          margin-bottom: -.5rem;
+          margin-top: -.5rem;
           @include mobile {
             font-size: 1.3rem;
             // text-align: center;
@@ -319,12 +307,12 @@ export default {
     }
 
     &__head {
-      font-size: 2.5rem;
+      font-size: 1.9rem;
+      // font-weight: $medium;
       font-weight: $light;
       color: $changes-blue;
       width: 70%;
       margin: auto;
-      padding-top: 2rem;
       @include mobile {
         font-size: 2rem;
         font-weight: $medium;
@@ -334,27 +322,27 @@ export default {
     &__button {
       background-color: $orange;
       border: none;
-      height: 4rem;
+      height: 2.5rem;
       color: $white;
-      font-size: 2rem;
-      font-weight: $light;
-      padding: 0rem 2rem;
-      margin: 3rem 2rem;
+      font-size: 1.2rem;
+      font-weight: $medium;
+      padding: 0rem 1rem;
+      margin: 1rem 1rem;
       box-shadow: 3px 3px 15px $lt-gray;
       @include mobile {
         height: 3rem;
         font-size: 1.7rem;
         margin: 1rem 2rem;
       }
-      }
+    }
     
     &__box {
       width: 50%;
       margin: auto;
       background-color: $changes-blue;
       color: white;
-      padding: 2rem;
-      margin-bottom: 3rem;
+      padding: 1rem 2rem;
+      margin-bottom: 1rem;
       margin-top: 1rem;
       box-shadow: 3px 3px 15px $lt-gray;
       @include mobile {
@@ -362,8 +350,9 @@ export default {
         margin-top: 2rem;
         }
       &__text {
-      font-size: 2.5rem;
-      font-weight: $medium;
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      font-weight: $light;
       margin-top: 1rem;
       @include mobile {
         font-size: 1.8rem;
@@ -371,8 +360,8 @@ export default {
         }
       }
       &__author {
-        font-size: 1.9rem;
-        font-weight: $medium;
+        font-size: 1.2rem;
+        font-weight: $light;
         font-style: italic;
         margin-top: 1rem;
         @include mobile {

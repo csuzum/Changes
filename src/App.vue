@@ -80,6 +80,7 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&display=swap');
 
 #app {
   font-family: 'Montserrat', sans-serif;
@@ -105,7 +106,7 @@
 
 .header-grid {
   margin: auto;
-  height: 8.5rem;
+  height: 6.5rem;
   display: grid;
   grid-template-columns: 2fr .5fr 8fr 1fr;
   grid-template-areas: "logo . call call" "logo . nav donate";
@@ -121,14 +122,14 @@
 
   &__logo {
     grid-area: logo;
-    padding: 1.7rem 0rem 0rem 5.5rem;
+    padding: 1.5rem 0rem 0rem 3rem;
     @include mobile {
       margin: auto;
       padding: 3rem 0rem 0rem 0rem;
     }
 
   &__img {
-    width: 12rem;
+    width: 8rem;
       @include mobile {
         width: 18rem;
       }
@@ -157,8 +158,8 @@
     grid-area: donate;
     display: flex;
     align-items: center;
-    height: 3.5rem;
-    margin-top: 2rem;
+    height: 2.5rem;
+    margin-top: 1.3rem;
     background-color: $orange;
     color: white;
     @include mobile {
@@ -178,7 +179,7 @@
   &__nav {
     grid-area: nav;
     text-align: right;
-    padding-top: 2.1rem;
+    margin-top: 1.3rem;
     @include mobile {
       padding: 0rem;
     }
@@ -198,11 +199,8 @@
   }
 }
 
-
 // Vue navbar
 a, a:visited {
-	// outline:none;
-	// color:white;
 }
 
 a:hover{
@@ -212,32 +210,16 @@ a:hover{
 nav{
 	display:inline-block;
   color: black;
-	// margin:60px auto 45px;
-	// background-color: $white;
-	// box-shadow:0 1px 1px #ccc;
-	// border-radius:2px;
 }
 
 nav a{
 	display:inline-block;
-	padding: .5rem .5rem;
+	padding: .4rem .4rem;
   font-weight: $bold;
 	color:black;
 	text-decoration:none;
-	// line-height:1;
-	// background-color:transparent;
-	// -webkit-transition:background-color 0.25s;
-	// -moz-transition:background-color 0.25s;
-	// transition:background-color 0.25s;
+
 }
-
-// nav a:first-child{
-// 	border-radius:2px 0 0 2px;
-// }
-
-// nav a:last-child{
-// 	border-radius:0 2px 2px 0;
-// }
 
 nav.home .home,
 nav.about .about,
@@ -249,18 +231,17 @@ nav.contact .contact {
   background-color: $changes-blue;
 }
 
-
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr;
   grid-template-areas: "changes phone signup connect";
-  grid-column-gap: 3rem;;
+  grid-column-gap: 1rem;;
   background-color: $dark-gray;
   font-weight: $light;
-  font-size: 1.2rem;
+  font-size: .8rem;
   color: white;
   height: auto;
-  padding: 3rem 5rem 2rem 5rem;
+  padding: 3rem 3rem 2rem 3rem;
   @include mobile {
     text-align: center;
     grid-template-areas: "changes changes changes changes" "phone phone phone phone" "signup signup signup signup" "connect connect connect connect";
@@ -268,9 +249,8 @@ nav.contact .contact {
   }
   &__changes {
     grid-area: changes;
-    padding-top: .8rem;
     &__logo {
-      width: 12rem;
+      width: 8rem;
     }
   }
 
@@ -282,11 +262,13 @@ nav.contact .contact {
       padding-top: 1rem;
     }
     &__help {
+      font-size: 1.3rem;
       font-weight: $light;
       margin-top: 0rem;
-      margin-bottom: -.8rem;
+      // margin-bottom: -.5rem;
     }
     &__call {
+      font-size: 1rem;
       font-weight: $light;
       color: $white;
     }
@@ -300,19 +282,20 @@ nav.contact .contact {
       padding-top: 1rem;
     }
     &__heading {
+      font-size: 1.3rem;
       font-weight: $light;
       color: $orange;
       margin-top: 0rem;
-      margin-bottom: -.8rem;
+      // margin-bottom: -.8rem;
     }
     &__p {
-      font-size: 1.7rem;
+      font-size: 1rem;
     }
     &__form__input {
-      width: 16rem;
-      height: 3rem;
+      width: 10rem;
+      height: 2rem;
       background-color: $lt-gray;
-      padding-left: 1.5rem;
+      padding-left: .5rem;
       margin-top: -.5rem;
     }
   }
@@ -324,6 +307,7 @@ nav.contact .contact {
       padding-top: 2rem;
     }
     &__heading {
+      font-size: 1.3rem;
       font-weight: $light;
       color: $orange;
       margin-top: 0rem;
@@ -332,13 +316,13 @@ nav.contact .contact {
     &__social {
       display: flex;
       justify-content: space-around;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: $lt-gray;
       padding: 1rem 0rem;
       margin-top: -.7rem;
     }
     &__copyright {
-      font-size: 1rem;
+      font-size: .6rem;
       margin-top: 0rem;
       @include mobile {
         padding-bottom: 2rem;
