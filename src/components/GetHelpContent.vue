@@ -10,16 +10,6 @@
       <h1 class="get-help-grid__hero-title__h1">We're here for you</h1>
     </div>
 
-    <!-- <div class="get-help-grid__hero">    
-      <img class="get-help-grid__hero__img" src="../assets/support-group.jpg"> 
-      <div class="get-help-grid__title" id="mobileHide">
-        <h1 class="get-help-grid__title__h1" id="mobileHide">We're here for you</h1>
-      </div>
-      <div class="get-help-grid__mobile-title" id="mobileShow">
-        <h1 class="get-help-grid__mobile-title__h1" id="mobileShow">We're here for you</h1>   
-      </div>
-    </div>    -->
-
     <div class="get-help-grid__intro">
       <h1 class="get-help-grid__intro__h1">Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope.</h1>
       <div class="get-help-grid__intro__columns">
@@ -178,7 +168,17 @@ export default {
       &__img {
         object-fit: cover;
         max-width: 100%;
-        max-height: 100%;
+        // max-height: 100%;
+      }
+    } 
+
+    &__hero {
+      grid-area: hero;
+      font-family: $sans-serif;
+      font-weight: $light;
+      &__img {
+        object-fit: cover;
+        max-width: 100%;
       }
     } 
 
@@ -191,8 +191,12 @@ export default {
         font-weight: $light;
         text-shadow: 2px 2px 10px $dark-gray;
         text-align: center;
-        padding: 3rem 0rem;
-        margin: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        margin: auto;
       }
     }
 

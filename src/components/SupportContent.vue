@@ -1,10 +1,11 @@
 <template>
   <div class="support-grid">
     <div class="support-grid__hero">    
-      <img class="support-grid__hero__img" src="../assets/seedling-hands.jpg"> 
-      <div class="support-grid__title">
-        <h1 class="support-grid__title__h1">Be a changemaker for families</h1>
-      </div>   
+      <img class="support-grid__hero__img" src="../assets/seedling-hands.jpg">    
+    </div>
+
+    <div class="support-grid__hero-title">
+      <h1 class="support-grid__hero-title__h1">Help bring Changes to families</h1>
     </div>
   </div>   
 </template>
@@ -43,31 +44,27 @@
       font-family: $sans-serif;
       font-weight: $light;
       &__img {
+        object-fit: cover;
         max-width: 100%;
-        max-height: 100%;
       }
-    }
+    } 
 
-  &__title {
-      color: $white;
-
+    &__hero-title {
+      grid-area: hero;
+      z-index: 1;
       &__h1 {
-        width: 95%;
-        font-size: 5rem;
+        color: $white;
+        font-size: 3.5rem;
         font-weight: $light;
+        text-shadow: 2px 2px 10px $dark-gray;
         text-align: center;
-        text-shadow: 2px 2px 10px $black;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-        @include mobile {
-          font-weight: $medium;
-          font-size: 2rem;
-          line-height: 2rem;
-        }        
+        width: 90%;
+        margin: auto;
       }
     }  
   }
-
 </style> 

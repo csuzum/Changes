@@ -46,7 +46,6 @@
       &__img {
         object-fit: cover;
         max-width: 100%;
-        max-height: 100%;
       }
     } 
 
@@ -59,8 +58,12 @@
         font-weight: $light;
         text-shadow: 2px 2px 10px $dark-gray;
         text-align: center;
-        padding: 3rem 0rem;
-        margin: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        margin: auto;
       }
     }
   }

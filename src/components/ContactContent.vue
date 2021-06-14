@@ -1,11 +1,18 @@
 <template>
   <div class="contact-grid">
     <div class="contact-grid__hero">    
+      <img class="contact-grid__hero__img" src="../assets/woman-phone.jpg">    
+    </div>
+
+    <div class="contact-grid__hero-title">
+      <h1 class="contact-grid__hero-title__h1">We're here for you</h1>
+    </div>
+    <!-- <div class="contact-grid__hero">    
       <img class="contact-grid__hero__img" src="../assets/woman-phone.jpg"> 
       <div class="contact-grid__title">
         <h1 class="contact-grid__title__h1">We're here to help!</h1>
       </div>   
-    </div>
+    </div> -->
   </div>   
 </template>
 
@@ -43,30 +50,27 @@
       font-family: $sans-serif;
       font-weight: $light;
       &__img {
+        object-fit: cover;
         max-width: 100%;
-        max-height: 100%;
       }
-    }
+    } 
 
-  &__title {
-      color: $white;
-
+    &__hero-title {
+      grid-area: hero;
+      z-index: 1;
       &__h1 {
-        width: 95%;
-        font-size: 5rem;
+        color: $white;
+        font-size: 3.5rem;
         font-weight: $light;
+        text-shadow: 2px 2px 10px $dark-gray;
         text-align: center;
-        text-shadow: 2px 2px 10px $black;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-        @include mobile {
-          font-weight: $medium;
-          font-size: 2rem;
-        }        
+        width: 90%;
+        margin: auto;
       }
     }  
   }
-
 </style> 
