@@ -36,7 +36,7 @@
       </div>
     </div>
   <div class="get-help-grid__quote">
-    <h2 class="get-help-grid__quote__head">While you prepare for change for the better, choose your message of hope.</h2>
+    <h2 class="get-help-grid__quote__head">While you prepare to change your family dynamics, choose your message of hope.</h2>
     <button class="get-help-grid__quote__button" @click="isShowing ^= true" v-on:click="getHappiness">Happiness</button>
     <button class="get-help-grid__quote__button" @click="isShowing ^= true" v-on:click="getFuture">Future</button>
     <button class="get-help-grid__quote__button" @click="isShowing ^= true" v-on:click="getWisdom">Wisdom</button>
