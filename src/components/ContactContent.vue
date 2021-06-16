@@ -1,22 +1,22 @@
 <template>
   <div class="contact-grid">
     <div class="contact-grid__hero">    
-      <img class="contact-grid__hero__img" src="../assets/woman-phone.jpg">    
+      <img class="contact-grid__hero__img" src="../assets/woman-phone.jpg" alt="pleased woman in yellow sweater talking on phone">    
     </div>
     <div class="contact-grid__hero-title">
       <h1 class="contact-grid__hero-title__h1">We're here for you</h1>
     </div>
-
     <!-- accordian FAQs -->
     <div class="contact-grid__faq">
       <h1 class="contact-grid__faq__heading display-2 text-center pt-3">FAQs</h1>
-      <div class="accordion-collapse" id="accordionExample">        
+      <div class="accordion-collapse" id="accordionExample">
         <div class="accordion-item">
           <p class="accordion-header" id="headingOne">
             <button class="button-lt-gray accordion-button collapsed  text-dark px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Is Changes right for me?</button>
           </p>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body px-5">
+              <img class="is-life-good" src="../assets/is-life-good.jpg" alt="graphic asks is life good?, if answer no, change something"><br>
               Members attend because their children are engaging in behaviors that are disrupting the home. Members include:
               <ul>
                 <li>Couples</li>
@@ -30,7 +30,6 @@
             </div>
           </div>
         </div>
-
         <div class="accordion-item">
           <p class="accordion-header" id="headingTwo">
             <button class="button-gray accordion-button collapsed  text-dark px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What behaviors can Changes help me address?</button>
@@ -50,7 +49,6 @@
             </div>
           </div>
         </div>
-
         <div class="accordion-item">
           <p class="accordion-header" id="headingThree">
             <button class="button-lt-gray accordion-button collapsed  text-dark px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">What makes Changes unique from other support groups?</button>
@@ -61,7 +59,6 @@
             </div>
           </div>
         </div>
-
         <div class="accordion-item">
           <p class="accordion-header" id="headingFour">
             <button class="button-gray accordion-button collapsed text-dark px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How are meetings structured?</button>
@@ -80,7 +77,6 @@
             </div>
           </div>
         </div>
-
         <div class="accordion-item">
           <p class="accordion-header" id="headingFive">
             <button class="button-lt-gray accordion-button collapsed text-dark px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">What can I expect when I attend my first Changes meeting?</button>
@@ -91,7 +87,6 @@
             </div>
           </div>
         </div>
-
         <div class="accordion-item">
           <p class="accordion-header" id="headingSix">
             <button class="button-gray accordion-button collapsed text-dark px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">What is a Changes Team?</button>
@@ -109,10 +104,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
     <!-- contact form -->
     <form class="contact-grid__form p-5" id="contactForm" name="contactForm" method="GET">
       <h1 class="contact-grid__form__heading">Talk to us.<br>We'd love to help!</h1>
@@ -161,105 +154,119 @@
       </div>
       <button class="btn text-light" type="submit">Submit</button>
     </form>
-  </div> 
-
-
+  </div>
 </template>
 
 <script>
   export default {
     name: 'ContactContent',
-  }
+  } 
 </script>
 
 <style scoped lang="scss">
-
 @mixin tablet {
   @media screen and (max-width: 860px) {
     @content;
   }
 }
-
 @mixin mobile() {
   @media screen and (max-width: 567px) {
     @content;
   }
 }
-
-  .contact-grid {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 3fr 2fr 2fr 2fr 2fr;
-    grid-template-areas: "hero hero hero hero hero" "faq faq form form form";
-    @include mobile {
-      display: unset;
-    }
-    
-    &__hero {
-      grid-area: hero;
-      font-family: $sans-serif;
-      font-weight: $light;
-      &__img {
-        object-fit: cover;
-        max-width: 100%;
+.contact-grid {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: "hero hero hero hero hero" "form form form faq faq";
+  @include mobile {
+    display: unset;
+  }
+  @include tablet {
+    width: 100%;
+  }
+  &__hero {
+    grid-area: hero;
+    font-family: $sans-serif;
+    font-weight: $light;
+    &__img {
+      object-fit: cover;
+      max-width: 100%;
+      @include mobile {
+        margin: -1rem 0;
       }
-    } 
-
-    &__hero-title {
-      grid-area: hero;
-      z-index: 1;
-      &__h1 {
-        color: $white;
-        font-size: 3.5rem;
-        font-weight: $light;
-        text-shadow: 2px 2px 10px $dark-gray;
-        text-align: center;
-        position: absolute;
-        padding-top: 6rem;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        margin: auto;
-      }
-    }
-
-    &__faq {
-      grid-area: faq;
-      &__heading {
-        color: $changes-blue;
-      }
-    }
-    
-    &__form {
-      grid-area: form;
-      color: $white;
-      background-color: $changes-blue;
-      &__heading {
-        font-weight: $light;
-        text-align: center;
-        margin-top: -.5rem;
-      }
-    }
-    button {
-      background-color: $orange;
-    }
-
-    .button-lt-gray {
-      background-color: $lightest-gray;
-    }
-    .button-gray {
-      background-color: $lt-gray;
-    }
-    input {
-      background-color: $lt-gray;
-    }
-    textarea {
-      background-color: $lt-gray;
-    }
-    .form-select {
-      color: $dark-gray;
-      background-color: $lt-gray;
     }
   }
+  &__hero-title {
+    grid-area: hero;
+    z-index: 1;
+    @include mobile {
+      position: relative;
+    }
+    &__h1 {
+      color: $white;
+      font-size: 3.5rem;
+      font-weight: $light;
+      text-shadow: 2px 2px 10px $dark-gray;
+      text-align: center;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      margin: auto;
+      @include tablet {
+        top: 23%;
+      }
+      @include mobile {
+        font-weight: $medium;
+        font-size: 2rem;
+        margin-top: -3rem;
+      }
+    }
+  }
+  &__faq {
+    grid-area: faq;
+    background-color: $changes-blue;
+    padding: 2.5rem 3rem 0rem 0;
+    @include mobile {
+      padding: .5rem 0 0 0;
+    }
+    &__heading {
+      color: $white;
+    }
+  }
+  &__form {
+    grid-area: form;
+    color: $white;
+    background-color: $changes-blue;
+    &__heading {
+      font-weight: $light;
+      text-align: center;
+      margin-top: -.5rem;
+    }
+  }
+  button {
+    background-color: $orange;
+  }
+  .button-lt-gray {
+    background-color: $lightest-gray;
+  }
+  .button-gray {
+    background-color: $lt-gray;
+  }
+  input {
+    background-color: $lt-gray;
+  }
+  textarea {
+    background-color: $lt-gray;
+  }
+  .form-select {
+    color: $dark-gray;
+    background-color: $lt-gray;
+  }
+  .is-life-good {
+    padding-bottom: 1rem;
+  }
+}
 </style> 
