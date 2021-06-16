@@ -250,8 +250,11 @@ nav.contact .contact {
   &__changes {
     grid-area: changes;
     &__logo {
-      width: 12rem;
+      width: 8rem;
       padding-bottom: 1rem;
+      @include mobile {
+        width: 10rem;
+      }
     }
   }
   &__phone {
